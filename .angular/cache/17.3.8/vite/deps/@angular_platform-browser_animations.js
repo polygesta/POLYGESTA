@@ -6,14 +6,14 @@ import {
   sequence,
   style,
   ɵPRE_STYLE
-} from "./chunk-HFVU5X4D.js";
+} from "./chunk-E2PYQQUE.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-HEPBUUSC.js";
+} from "./chunk-OND7CA5K.js";
 import {
   DOCUMENT
-} from "./chunk-I2TC2INL.js";
+} from "./chunk-RUXWRG6Z.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionScheduler,
@@ -30,13 +30,13 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-DKLWNHAN.js";
+} from "./chunk-IN3YC3Z4.js";
 import {
   __objRest,
   __spreadValues
 } from "./chunk-PEQT6LCE.js";
 
-// ../../../node_modules/@angular/animations/fesm2022/browser.mjs
+// node_modules/@angular/animations/fesm2022/browser.mjs
 var LINE_START = "\n - ";
 function invalidTimingValue(exp) {
   return new RuntimeError(3e3, ngDevMode && `The provided timing value "${exp}" is invalid.`);
@@ -3992,7 +3992,7 @@ var AnimationRendererFactory = class {
   }
 };
 
-// ../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs
+// node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var _InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {
   // The `ApplicationRef` is injected here explicitly to force the dependency ordering.
   // Since the `ApplicationRef` should be created earlier before the `AnimationEngine`, they
@@ -4147,14 +4147,14 @@ export {
 
 @angular/animations/fesm2022/browser.mjs:
   (**
-   * @license Angular v17.3.10
+   * @license Angular v17.3.11
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/platform-browser/fesm2022/animations.mjs:
   (**
-   * @license Angular v17.3.10
+   * @license Angular v17.3.11
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
