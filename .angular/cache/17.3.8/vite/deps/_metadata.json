@@ -1,0 +1,91 @@
+{
+  "hash": "3b7ed16c",
+  "configHash": "c7e5f586",
+  "lockfileHash": "2a655e31",
+  "browserHash": "896a861f",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "a54f5231",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "58846653",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "0871c7da",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "1c26d913",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "12ba8a9d",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "38ca8846",
+      "needsInterop": false
+    },
+    "@coreui/angular": {
+      "src": "../../../../../node_modules/@coreui/angular/fesm2022/coreui-angular.mjs",
+      "file": "@coreui_angular.js",
+      "fileHash": "9b83604c",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../../../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "d173478b",
+      "needsInterop": false
+    },
+    "@coreui/icons-angular": {
+      "src": "../../../../../node_modules/@coreui/icons-angular/fesm2022/coreui-icons-angular.mjs",
+      "file": "@coreui_icons-angular.js",
+      "fileHash": "8059cbf7",
+      "needsInterop": false
+    },
+    "@coreui/icons": {
+      "src": "../../../../../node_modules/@coreui/icons/dist/esm/index.js",
+      "file": "@coreui_icons.js",
+      "fileHash": "be3c4560",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-3GL5I7WM": {
+      "file": "chunk-3GL5I7WM.js"
+    },
+    "chunk-HFVU5X4D": {
+      "file": "chunk-HFVU5X4D.js"
+    },
+    "chunk-2PMOBSZ2": {
+      "file": "chunk-2PMOBSZ2.js"
+    },
+    "chunk-HEPBUUSC": {
+      "file": "chunk-HEPBUUSC.js"
+    },
+    "chunk-I2TC2INL": {
+      "file": "chunk-I2TC2INL.js"
+    },
+    "chunk-DKLWNHAN": {
+      "file": "chunk-DKLWNHAN.js"
+    },
+    "chunk-PEQT6LCE": {
+      "file": "chunk-PEQT6LCE.js"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<div [ngClass]="{'blur-background': modalVisible}">
+    <div class="contact-us">
+        <h1 class="title">Contáctanos</h1>
+    </div>
+    
+    <section class="content-section contact-us-section">
+        <div class="icons-section">
+            <img class="logos" src="../../../assets/image/icons/logos.png" alt="logos">
+        </div>
+    </section>
+    <div class="form-section">
+        <div class="contact-us-form">
+            <h2 class="subtitle">¿Quieres decirnos algo?</h2>
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group" [ngClass]="{'has-error': f['name'].errors && f['name'].touched}">
+                    <label>Nombre</label>
+                    <div class="input-error">
+                        <input class="form-control" type="text" formControlName="name" [attr.title]="getErrorMessage('name')" data-bs-toggle="tooltip">
+                        <div *ngIf="f['name'].errors && f['name'].touched" class="error-message">
+                            {{ getErrorMessage('name') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': f['entity'].errors && f['entity'].touched}">
+                    <label>Entidad</label>
+                    <div class="input-error">
+                        <input class="form-control" type="text" formControlName="entity">
+                        <div *ngIf="f['entity'].errors && f['entity'].touched" class="error-message">
+                            {{ getErrorMessage('entity') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': f['filiation'].errors && f['filiation'].touched}">
+                    <label>Filiación</label>
+                    <div class="input-error">
+                        <input class="form-control" type="text" formControlName="filiation">
+                        <div *ngIf="f['filiation'].errors && f['filiation'].touched" class="error-message">
+                            {{ getErrorMessage('filiation') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" [ngClass]="{'has-error': f['email'].errors && f['email'].touched}">
+                    <label>Correo</label>
+                    <div class="input-error">
+                        <input class="form-control" type="email" formControlName="email">
+                        <div *ngIf="f['email'].errors && f['email'].touched" class="error-message">
+                            {{ getErrorMessage('email') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-col" [ngClass]="{'has-error': f['message'].errors && f['message'].touched}">
+                    <label>Mensaje</label>
+                    <div class="input-error">
+                        <textarea class="form-control" formControlName="message"></textarea>
+                        <div *ngIf="f['message'].errors && f['message'].touched" class="error-message">
+                            {{ getErrorMessage('message') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group-col">
+                    <button [disabled]="sendingEmail || !form.valid" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="modalVisible">
+    <div class="modal-backdrop fade show"></div>
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Enviado</h5>
+            <button type="button" class="close" aria-label="Close" (click)="hideModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Muchas gracias por compartir tu mensaje, ha sido enviado exitosamente.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="hideModal()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,44 @@
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon svg {
+    width: 16px;
+    fill: white;
+}
+
+.twitter {
+   background: #00aced;
+   border-color: #00aced;
+}
+
+.linkedin {
+    background: #007bb6;
+    border-color: #007bb6;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #f09433;
+}
+
+.mail {
+    background: #ea4335;
+    border-color: #ea4335;
+}

@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-sm-3 col-3">
+          <div class="logo">
+            <img (click)="navigate('/home')" src="../../../assets/image/main_logo.jpg" alt="Logo Polygesta" class="logo">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9 text-end">
+          <div class="menu-icon d-md-none" (click)="openMenu()">
+            <i class="bi" [ngClass]="menu_icon"></i>
+          </div>
+          <div class="desktop_menu" [class.mobile_menu]="menuValue">
+            <ul class="nav">
+              <li class="nav-item" [ngClass]="{'active': isActive('/home')}" (click)="navigate('/home')">INICIO</li>
+              <li class="nav-item" [ngClass]="{'active': isActive('/about-us')}" (click)="navigate('/about-us')">¿QUIÉNES SOMOS?</li>
+              <li class="nav-item" [ngClass]="{'active': isActive('/project')}" (click)="navigate('/project')">PROYECTO</li>
+              <li class="nav-item" [ngClass]="{'active': isActive('/contact-us')}" (click)="navigate('/contact-us')">CONTÁCTANOS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  

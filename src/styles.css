@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'AncizarSans-Black';
+    src: url('./assets/fonts/AncizarSans-Black_02042016.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AncizarSans-Bold';
+    src: url('./assets/fonts/AncizarSans-Bold_02042016.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AncizarSans-Extrablack';
+    src: url('./assets/fonts/AncizarSans-Extrablack_02042016.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AncizarSans-Ligth';
+    src: url('./assets/fonts/AncizarSans-Light_02042016.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AncizarSans-Regular';
+    src: url('./assets/fonts/AncizarSans-Regular_02042016.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AncizarSans-Thin';
+    src: url('./assets/fonts/AncizarSans-Thin_02042016.otf') format('opentype');
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'AncizarSans-Regular', 'AncizarSans-Thin', sans-serif; font-size: large;}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'AncizarSans-Bold', sans-serif;
+}
+
+h1, h2 {
+    color: #0F4229;
+}
+
+.content-section {
+    padding: 40px;
+}
+
+@media screen and (max-width: 765px) {
+    .content-section {
+        padding: 10px;
+    }   
+}
+

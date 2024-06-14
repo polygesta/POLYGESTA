@@ -1,0 +1,126 @@
+<section class="content-section header">
+    <h1 class="title">Desarrollo de capacidades para la recuperación, aprovechamiento y transformación de residuos plásticos en comunidades marino-costeras, con incidencia en el fortalecimiento de la cooperación e intercambio de conocimiento entre la Universidad-Empresa-Estado-Sociedad.</h1>
+</section>
+
+<section class="content-section tumaco-section">
+    <h1>Conozcamos San Andrés de Tumaco</h1>
+    <div class="row location-group">
+        <div class="col-6 location">
+            <h4>Ubicación geográfica</h4>
+            <img src="../../../assets/image/maps/map1.png" alt="mapa-ubicacion">
+            <p>Su población es de 221.469 habitantes (DANE, 2018).</p>
+        </div>
+        <div class="col-6 info-cards">
+            <div class="info-card">
+                <p>Es el municipio más grande del departamento de Nariño, su extensión es de 3.778 km2 y corresponde al 11,46% del área del departamento (DNP, 2016).</p>
+            </div>
+            <div class="info-card">
+                <p>Su casco urbano se expande en la zona continental e insular y conecta a las islas Tumaco, La Viciosa y el Morro.</p>
+            </div>
+            <div class="info-card">
+                <p>Su población es de 221.469 habitantes (DANE, 2018).</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="goals-section">
+    <h1>Nuestros objetivos</h1>
+    <div class="goals">
+        <div class="goal">
+            <div class="goal-number goal-1">
+                <h3 class="m-0">1</h3>
+            </div>
+            <p>Desarrollar procesos de análisis y valoración de los impactos de los residuos plásticos en ecosistemas marinos-costeros utilizando como referencia guías y estándares técnicos/normativos en áreas priorizadas de San Andrés de Tumaco.</p>
+        </div>
+    
+        <div class="goal">
+            <div class="goal-number goal-2">
+                <h3 class="m-0">2</h3>
+            </div>
+            <p>Fortalecer el marco legal e institucional para el ejercicio de la gobernanza y gobernabilidad en la gestión adecuada de los residuos plásticos, que articule los diferentes actores de la comunidad, así como sus capacidades y conocimientos, mediante recomendaciones de política pública.</p>
+        </div>
+    
+        <div class="goal">
+            <div class="goal-number goal-3">
+                <h3 class="m-0">3</h3>
+            </div>
+            <p>Mejorar los procesos de apropiación social del conocimiento científico y socio-tecnológico para la recuperación y aprovechamiento de residuos plásticos, que promuevan el desarrollo productivo local, identificando y fortaleciendo iniciativas con criterios de innovación, crecimiento verde y economía circular.</p>
+        </div>
+    </div>
+</div>
+
+<section class="graphics col-12">
+    <div class="graphic-row">
+        <div class="col column">
+            <div class="goal-number card-goal goal-1">
+                <h3 class="m-0">1</h3>
+            </div>
+            <div class="row images-row">
+                <img src="../../../assets/image/tumaco/graphics/reports/1.png" alt="tumaco-1">
+                <img src="../../../assets/image/tumaco/graphics/reports/2.png" alt="tumaco-2">
+                <img src="../../../assets/image/tumaco/graphics/reports/3.png" alt="tumaco-3">
+            </div>
+        </div>
+    </div>
+
+    <div class="graphic-row row">
+        <div class="col column">
+            <div class="goal-number card-goal goal-2">
+                <h3 class="m-0">2</h3>
+            </div>
+            <div class="row images-row">
+                <img src="../../../assets/image/tumaco/graphics/objectives/1.png" alt="tumaco-1">
+                <img src="../../../assets/image/tumaco/graphics/objectives/2.png" alt="tumaco-2">
+                <img src="../../../assets/image/tumaco/graphics/objectives/3.png" alt="tumaco-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-group">
+    <h2 class="title">¡Conoce cómo contribuimos a fortalecer los procesos de economía circular en comunidades de ecosistemas marino costeros!</h2>
+    <div class="row carousel-row">
+        <ng-container class="carousel">
+            <c-carousel *ngIf="slides_left.length > 0" [interval]="3000" transition="slide">
+                <c-carousel-indicators></c-carousel-indicators>
+                <c-carousel-inner>
+                    <c-carousel-item *ngFor="let slide of slides_left">
+                    <img
+                        [src]="slide.src"
+                        alt="{{slide.title}}"
+                        class="d-block w-100"
+                        loading="lazy"
+                    />
+                    </c-carousel-item>
+                </c-carousel-inner>
+                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+            </c-carousel>
+        </ng-container>
+        <ng-container class="carousel">
+            <c-carousel *ngIf="slides_rigth.length > 0" [interval]="3000" transition="slide">
+                <c-carousel-indicators></c-carousel-indicators>
+                <c-carousel-inner>
+                    <c-carousel-item *ngFor="let slide of slides_rigth">
+                    <img
+                        [src]="slide.src"
+                        alt="{{slide.title}}"
+                        class="d-block w-100"
+                        loading="lazy"
+                    />
+                    </c-carousel-item>
+                </c-carousel-inner>
+                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+            </c-carousel>
+        </ng-container>
+    </div>
+</section>
+
+<section class="button-section">
+    <button type="button" class="btn btn-primary" (click)="navigate('/contact-us')">¿Tienes alguna duda acerca de nuestro proyecto o deseas contactarnos? </button>
+</section>
+
+

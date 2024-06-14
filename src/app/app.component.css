@@ -1,0 +1,6 @@
+.social-networks {
+    position: fixed;
+    top: 45%;
+    left: 0;
+    z-index: 99999;
+}
