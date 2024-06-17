@@ -126,3 +126,9 @@
     filter: blur(5px);
     transition: filter 0.3s ease;
 }
+
+@media screen and (max-width: 800px) {
+    .contact-us-form {
+        width: 100%;
+    }
+}

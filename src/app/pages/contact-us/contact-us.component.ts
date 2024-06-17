@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ModalModule } from '@coreui/angular';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,8 +12,8 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
-export class ContactUsComponent implements OnInit {
-  
+export class ContactUsComponent {
+
   publicKey = "foNRwCaLUj83_TmHY";
   serviceId = "service_zwu2tti";
   templateId = "template_9wzuv44";
@@ -21,21 +22,13 @@ export class ContactUsComponent implements OnInit {
   modalVisible = false;
   sendingEmail = false;
 
-  form: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    entity: new FormControl(''),
-    filiation: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl(''),
-  });
+  @ViewChild('content', { static: true }) content: TemplateRef<any> | null = null;
+  form: FormGroup;
 
- 
-  constructor(private formbuilder: FormBuilder){
+  constructor(private modalService: NgbModal, private formBuilder: FormBuilder) {
     emailjs.init(this.publicKey);
-  }
-
-  ngOnInit(): void {
-    this.form = this.formbuilder.group({
+    
+    this.form = this.formBuilder.group({
       name: ['', Validators.required],
       entity: ['', Validators.required],
       filiation: ['', Validators.required],
@@ -44,10 +37,9 @@ export class ContactUsComponent implements OnInit {
     });
   }
 
-  
-
   get f() { return this.form.controls; }
 
+	
   getErrorMessage(controlName: string): string {
     const control = this.form.get(controlName);
     if (control?.hasError('required')) {
@@ -63,6 +55,13 @@ export class ContactUsComponent implements OnInit {
     this.sendingEmail = true;
     this.sendEmail();
   }
+
+  openModal() {
+    this.modalVisible = true;
+		this.modalService.open(this.content, { ariaLabelledBy: 'modal-basic-title', centered: true, backdrop: 'static' }).result.finally(
+      () => { this.hideModal(); }	
+		);
+	}
 
   hideModal() {
     this.sendingEmail = false;
@@ -82,7 +81,7 @@ export class ContactUsComponent implements OnInit {
     emailjs.send(this.serviceId, this.templateId, templateParams).then(
       (response: EmailJSResponseStatus) => {
         if (response.status == 200) {
-          this.modalVisible = true;
+          this.openModal();
         }
       }, (error) => {
         console.log("failed sending email", error.message);

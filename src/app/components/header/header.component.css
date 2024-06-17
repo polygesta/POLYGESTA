@@ -14,7 +14,6 @@ header {
 
 .desktop_menu {
   margin-top: 24px;
-  
 }
 
 .desktop_menu ul {
@@ -42,46 +41,58 @@ header {
 }
 
 .row {
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu-icon {
   display: none;
 }
 
+::ng-deep .offcanvas-custom-width {
+  width: auto !important;
+  background-color: #195750;
+}
+
+.offcanvas-title {
+  color: white;
+  padding: 10px 26px;
+}
+
+.btn-close {
+  filter: invert(100%);
+}
+
+.mobile_menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.mobile_menu ul li {
+  text-align: left;
+  margin: 0;
+  padding: 10px 26px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  color: white;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.mobile_menu ul li:hover, .mobile_menu ul li.active {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #36cb5b;
+  transition: 0.2s ease-in-out;
+}
+
 @media screen and (max-width: 765px) {
-  .nav {
-    display: flow-root;
-  }
-  .desktop_menu {
-    background: #195750;
-    position: fixed !important;
-    right: -280px;
-    transition: 0.4s ease-in-out;
-    top: 64px;
-    width: 280px;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .desktop_menu ul {
-    display: flow-root;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .desktop_menu ul li {
-    display: block;
-    text-align: left;
-    margin: 0;
-    padding: 10px 26px;
-    width: 100%;
-    border-bottom: 1px solid grey;
-  }
-
   .menu-icon {
     display: block;
     color: white;
@@ -89,8 +100,7 @@ justify-content: space-between;
     padding-top: 10px;
   }
 
-  .mobile_menu {
-    right: 0;
-    transition: 0.4s ease-in-out;
+  .desktop_menu {
+    display: none;
   }
 }

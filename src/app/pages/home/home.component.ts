@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { CarouselComponent, CarouselInnerComponent, CarouselItemComponent, CarouselModule } from '@coreui/angular';
+import {NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -9,26 +10,25 @@ import { CarouselComponent, CarouselInnerComponent, CarouselItemComponent, Carou
   imports: [
     RouterModule,
     CommonModule,
-    CarouselModule,
-    CarouselComponent,
-    CarouselInnerComponent,
-    CarouselItemComponent,
+    NgbCarouselModule,
+    FormsModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
-  slides: any[] = new Array(3).fill({ id: -1, src: '', title: '', subtitle: '' });
+export class HomeComponent implements OnInit{
+
+  images: any[] = new Array(3).fill({ id: -1, src: '', title: '', subtitle: '' });
 
   ngOnInit(): void {
-    this.slides[0] = {
-      src: "https://cemarin.org/wp-content/uploads/2023/10/cabecera-header-01.png"
+    this.images[0] = {
+      src: "../../../assets/image/tumaco/slide1.jpg"
     };
-    this.slides[1] = {
-      src: "../../../assets/image/tumaco/slidex2.jpg"
+    this.images[1] = {
+      src: "../../../assets/image/tumaco/slide2.jpg"
     };
-    this.slides[2] = {
-      src: "../../../assets/image/tumaco/slidex1.jpg"
+    this.images[2] = {
+      src: "../../../assets/image/tumaco/slide3.jpg"
     };
   }
 
@@ -36,7 +36,4 @@ export class HomeComponent implements OnInit {
     window.open(route, "_blank");
   }
 
-  onItemChange($event: any): void {
-    console.log('Carousel onItemChange', $event);
-  }
 }
