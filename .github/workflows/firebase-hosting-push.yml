@@ -10,7 +10,22 @@ jobs:
   deploy_live_website:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.13.1'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build 
+
       - uses: actions/checkout@v4
+      
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
