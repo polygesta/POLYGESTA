@@ -1,26 +1,24 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { CarouselComponent, CarouselControlComponent, CarouselInnerComponent, CarouselItemComponent, CarouselModule, ContainerComponent } from '@coreui/angular';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbCarouselModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tumaco-project',
   standalone: true,
   imports: [
-    ContainerComponent,
     CommonModule,
-    CarouselModule,
-    CarouselComponent,
-    CarouselInnerComponent,
-    CarouselItemComponent,
-    CarouselControlComponent,
-    RouterLink],
+    NgbCarouselModule
+    ],
   templateUrl: './tumaco-project.component.html',
   styleUrl: './tumaco-project.component.css'
 })
 export class TumacoProjectComponent implements OnInit{
   
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalService: NgbModal) {}
+  
+  currentImageSrc: string | null = null;
+  @ViewChild('content') content!: TemplateRef<any>;
 
   slides_left: any[] = new Array(8).fill({ id: -1, src: '', title: '', subtitle: '' });
   slides_rigth: any[] = new Array(11).fill({ id: -1, src: '', title: '', subtitle: '' });
@@ -85,6 +83,11 @@ export class TumacoProjectComponent implements OnInit{
     this.slides_rigth[10] = {
       src: "../../../assets/image/tumaco/carousel/2/11.jpg"
     };
+  }
+
+  openModal(imageSrc: string) {
+    this.currentImageSrc = imageSrc;
+    this.modalService.open(this.content, { ariaLabelledBy: 'modal-basic-title', centered: true });
   }
 
   navigate(path: string): void {

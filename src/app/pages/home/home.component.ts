@@ -1,22 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import {NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    RouterModule,
     CommonModule,
     NgbCarouselModule,
-    FormsModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
+  constructor(private router: Router) {}
 
   images: any[] = new Array(3).fill({ id: -1, src: '', title: '', subtitle: '' });
 
@@ -34,6 +32,10 @@ export class HomeComponent implements OnInit{
 
   navigate(route: string) {
     window.open(route, "_blank");
+  }
+
+  navigateToPage(path: string): void {
+    this.router.navigate([path]);
   }
 
 }

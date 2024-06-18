@@ -9,7 +9,6 @@
 
 .header {
     background-color: #E8F5E9;
-    opacity: 0.75
 }
 
 .location-group {
@@ -47,15 +46,20 @@
     padding: 30px;
     gap: 20px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .goal {
-    width: 450px;
-    height: 450px;
-    padding: 80px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 450px;
+    max-height: 450px;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 20px;
     border-radius: 50%;
     box-shadow: 15px 15px 20px 0 rgba(0, 0, 0, 0.2);
     background-color: white;
@@ -64,11 +68,16 @@
     align-items: center;
     justify-content: center;
     border: 2px solid green;
-    /* text-align: center; */
+    text-align: center;
+    margin: 10px;
 }
 
 .goal p {
+    font-size: 1.5vw;
     text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 1.2;
 }
 
 .goal-number {
@@ -82,7 +91,7 @@
 }
 
 .goal-number h3 {
-    font-size: 35px;
+    font-size: 2vw;
     text-align: center;
 }
 
@@ -161,10 +170,13 @@
 .carousel {
     padding: 30px;
     margin: 20px;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
     border-radius: 15px;
     background-color: whitesmoke;
+}
+
+.picsum-img-wrapper img {
+  cursor: pointer;
 }
 
 .carousel img {
@@ -208,5 +220,88 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 1100px) {
+    .goal {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .goal p {
+        font-size: 1.8vw;
+    }
+
+    .goal-number h3 {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .title, h2, h4 {
+        font-size: 5vw;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .location-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .images-row {
+        flex-direction: column;
+    }
+
+    .graphics img {
+        width: 100%;
+    }
+
+    .goal {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .goal p {
+        font-size: 2vw;
+    }
+
+    .goal-number h3 {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .tumaco-section {
+        padding: 0;
+    }
+
+    .graphic-row {
+        margin: 40px 0 40px 0;
+    }
+
+    .goal {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .goal p {
+        font-size: 3vw;
+    }
+
+    .goal-number h3 {
+        font-size: 3.5vw;
+    }
+
+    .carousel {
+        margin: 0;
+    }
+
+    .carousel img {
+        width: 300px;
     }
 }

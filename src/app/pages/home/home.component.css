@@ -24,7 +24,6 @@
 
 .title-button h2 {
     text-align: center;
-    /* color: #ffffff; */
 }
 
 .title-button:hover {
@@ -98,4 +97,21 @@
 .images-group img {
     width: 100%;
     border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    h2, h4 {
+        font-size: 4vw;
+    }
+
+    .title-button {
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding: 10px;
+        gap: 2px;
+    }
+
+    .column {
+        gap: 10px;
+    }
 }

@@ -3,7 +3,7 @@
 </section>
 
 <section class="content-section tumaco-section">
-    <h1>Conozcamos San Andrés de Tumaco</h1>
+    <h2>Conozcamos San Andrés de Tumaco</h2>
     <div class="row location-group">
         <div class="col-6 location">
             <h4>Ubicación geográfica</h4>
@@ -78,45 +78,48 @@
     </div>
 </section>
 
-<!-- <section class="carousel-group">
+<section class="carousel-group">
     <h2 class="title">¡Conoce cómo contribuimos a fortalecer los procesos de economía circular en comunidades de ecosistemas marino costeros!</h2>
     <div class="row carousel-row">
-        <ng-container class="carousel">
-            <c-carousel *ngIf="slides_left.length > 0" [interval]="3000" transition="slide">
-                <c-carousel-indicators></c-carousel-indicators>
-                <c-carousel-inner>
-                    <c-carousel-item *ngFor="let slide of slides_left">
-                    <img
-                        [src]="slide.src"
-                        alt="{{slide.title}}"
-                        class="d-block w-100"
-                        loading="lazy"
-                    />
-                    </c-carousel-item>
-                </c-carousel-inner>
-                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
-            </c-carousel>
-        </ng-container>
-        <ng-container class="carousel">
-            <c-carousel *ngIf="slides_rigth.length > 0" [interval]="3000" transition="slide">
-                <c-carousel-indicators></c-carousel-indicators>
-                <c-carousel-inner>
-                    <c-carousel-item *ngFor="let slide of slides_rigth">
-                    <img
-                        [src]="slide.src"
-                        alt="{{slide.title}}"
-                        class="d-block w-100"
-                        loading="lazy"
-                    />
-                    </c-carousel-item>
-                </c-carousel-inner>
-                <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-                <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
-            </c-carousel>
-        </ng-container>
+        <ngb-carousel
+            #carousel
+            [interval]="3000"
+            [pauseOnHover]="false"
+            [showNavigationIndicators]="false"
+            [wrap]="true"
+            class="ngb-carousel"
+        >
+            <ng-template ngbSlide *ngFor="let img of slides_left; let i = index">
+                <div class="picsum-img-wrapper">
+                <img [src]="img.src" alt="home-image" (click)="openModal(img.src)"/>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+        <ngb-carousel
+            #carousel
+            [interval]="3000"
+            [pauseOnHover]="false"
+            [showNavigationIndicators]="false"
+            [wrap]="true"
+            class="ngb-carousel"
+        >
+            <ng-template ngbSlide *ngFor="let img of slides_rigth; let i = index">
+                <div class="picsum-img-wrapper">
+                <img [src]="img.src" alt="home-image" (click)="openModal(img.src)" />
+                </div>
+            </ng-template>
+        </ngb-carousel>
     </div>
-</section> -->
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body custom-modal-body">
+      <img [src]="currentImageSrc" alt="Enlarged image" class="img-fluid custom-modal-img" />
+    </div>
+</ng-template>
 
 <section class="button-section">
     <button type="button" class="btn btn-primary" (click)="navigate('/contact-us')">¿Tienes alguna duda acerca de nuestro proyecto o deseas contactarnos? </button>
