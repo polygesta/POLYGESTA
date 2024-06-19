@@ -49,7 +49,6 @@
 }
 
 .lines-of-investigation-group .investigation-line {
-    /* border-radius: 20px; */
     padding: 15px;
     margin: 10px 10px 0 10px;
     font-size: medium;
@@ -60,6 +59,8 @@
 .lines-of-investigation-group .ods {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px
 }
 
@@ -101,6 +102,7 @@
 .results-group .results {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     justify-content: space-evenly;
@@ -110,9 +112,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 30%;
     max-width: 400px;
     background-color: #C5D17F;
-    margin: 30px 20px 80px 20px;
+    margin: 30px 20px 10px 20px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 220px;
@@ -149,11 +152,88 @@
     background-color: white;
     margin: 20px 30px 80px 30px;
     padding: 50px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
 }
 
 .event p {
     font-size: larger;
+}
+
+@media screen and (max-width: 1060px) {
+    .info-card h4 {
+        font-size: 2.5vw;
+    }
+    .info-card p {
+        font-size: 2vw;
+    }
+
+    .results p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    .project .project-title {
+        margin: 30px 10px 20px 10px;
+    }
+
+    .lines-of-investigation-group {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0 40px 0;
+        gap: 20px;
+    }
+
+    .lines-of-investigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .problem-and-goal-group {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ods img {
+        width: 80px;
+    }
+
+    .results-group .results {
+        gap: 5px;
+    }
+
+    .results-group .results .result {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .results p {
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    .event {
+        margin: 20px 0 20px 0;
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .info-card h4 {
+        font-size: 3vw;
+    }
+    .info-card p {
+        font-size: 2.5vw;
+    }
+
+    .results p {
+        font-size: 3vw;
+    }
 }

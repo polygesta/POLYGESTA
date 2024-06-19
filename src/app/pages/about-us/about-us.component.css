@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     padding: 0 10% 0 10%;
-
 }
 
 .title {
@@ -143,7 +142,6 @@
     outline: none;
     transform: translateY(-60%);
     transition: transform 0.2s;
-    /* border: 2px solid #19564F; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
 }
@@ -192,7 +190,6 @@
     padding: 5px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    /* border-bottom-left-radius: 15px; */
     background-color: #19564F;
     color: #ffffff;
 }
@@ -202,8 +199,6 @@
     padding: 5px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
-
-    /* border-bottom-left-radius: 15px; */
     background-color: #dedddd;
 }
 

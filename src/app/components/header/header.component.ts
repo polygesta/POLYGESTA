@@ -23,16 +23,12 @@ export class HeaderComponent {
   }
 
   openMenu() {
-    // this.menuValue = !this.menuValue;
-    // this.menu_icon = this.menuValue ? 'bi bi-x' : 'bi bi-list';
     if (this.content) {
       this.offcanvasService.open(this.content, { position: 'end', panelClass: 'offcanvas-custom-width' });
     }
   }
 
   closeMenu() {
-    // this.menuValue = false;
-    // this.menu_icon = 'bi bi-list';
     this.offcanvasService.dismiss();
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';

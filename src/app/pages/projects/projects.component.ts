@@ -1,30 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgbScrollSpyModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent implements OnInit{
-  
-  constructor(private route: ActivatedRoute) {}
-
-
-  ngOnInit(): void {
-    // this.route.fragment.subscribe(fragment => {
-    //   if (fragment) {
-    //     const element = document.getElementById(fragment);
-    //     if (element) {
-    //       element.scrollIntoView({ behavior: 'smooth' });
-    //     }
-    //   }
-    // });
-  }
-
+export class ProjectsComponent {
   navigate(route: string) {
     window.open(route, "_blank");
   }

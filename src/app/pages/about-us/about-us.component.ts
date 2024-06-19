@@ -14,9 +14,4 @@ export class AboutUsComponent {
   navigateToProjects(): void {
     this.router.navigate(['/projects']);
   }
-
-  navigateToProject(fragment: string): void {
-    this.router.navigate(['/projects'], { fragment });
-  }
-
 }
