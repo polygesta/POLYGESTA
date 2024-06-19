@@ -226,11 +226,17 @@
 }
 
 @media (max-width: 480px) {
+
+    .info-card {
+        width: 90%;
+        padding: 20px;
+    }
+
     .info-card h4 {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .info-card p {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .results p {
