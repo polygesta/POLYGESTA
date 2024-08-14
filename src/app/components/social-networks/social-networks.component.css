@@ -39,6 +39,10 @@
 }
 
 .mail {
-    background: #ea4335;
+    background: #ccc;
     border-color: #ea4335;
+}
+
+.mail i{
+    color: white;
 }

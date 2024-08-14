@@ -16,6 +16,9 @@ import {
   useAnimation
 } from "./chunk-36DDFJI4.js";
 import {
+  IconDirective
+} from "./chunk-D5JGFXXU.js";
+import {
   ActivatedRoute,
   NavigationEnd,
   Router,
@@ -23,9 +26,6 @@ import {
   RouterLinkActive,
   RouterModule
 } from "./chunk-WSCM4WRJ.js";
-import {
-  IconDirective
-} from "./chunk-D5JGFXXU.js";
 import "./chunk-NMWZFO5G.js";
 import {
   AsyncPipe,
